@@ -1,7 +1,38 @@
-# delivery-fast-api
-Back-end básico em Python utilizando a FastAPI.
-Gerenciamento do CRUD de geração de tarefas.
+# TASKER - Simple Task Manager
+## Description
+Gerenciador simples de tarefas capaz de cadastrar usuários e oprações de
+CRUD de geração de tarefas.
 
-## Descrição
-Curso finalizado em 29/01/2026
-URL: <https://www.youtube.com/watch?v=BtIy2aD8k_w&list=PLpdAy0tYrnKy3TvpCT-x7kGqMQ5grk1Xq&index=1>
+## 🚀 Funcionalidades
+- CRUD de tarefas
+- Cadastro de usuários (administradores e clientes)
+- Operações de Finalização ou Arquivamento de tarefas
+
+## Arquitetura
+- Separação de Responsabilidades
+- Service layer
+- Autenticação em JWT Tokes
+
+# Tecnologias
+- Python
+- FastAPI
+- SQLAlchemy
+- SQLite
+
+## Como rodar
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+## Como rodar em porta específica
+```bash
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port $PORT
+```
+
+## Domínio
+- produtividade e gerenciamento
+
+
+
