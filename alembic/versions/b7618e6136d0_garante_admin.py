@@ -1,8 +1,8 @@
-"""Adicionando campo de itens a Pedido
+"""Garante admin
 
-Revision ID: 08a9818eadc6
-Revises: 09e2cc29dc6b
-Create Date: 2026-01-29 22:03:18.168259
+Revision ID: b7618e6136d0
+Revises: 432ef8b7cbde
+Create Date: 2026-04-05 21:19:57.191533
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '08a9818eadc6'
-down_revision: Union[str, Sequence[str], None] = '09e2cc29dc6b'
+revision: str = 'b7618e6136d0'
+down_revision: Union[str, Sequence[str], None] = '432ef8b7cbde'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

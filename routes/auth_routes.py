@@ -4,10 +4,11 @@ Rotas referentes às rotas relacionadas à autenticação.
 '''
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
-from models import Usuario
-from dependencies import get_sessao, verificar_token
-from main import bcryp_context
-from schemas import UsuarioSchema, LoginSchema
+from app.models import Usuario
+from core.dependencies import get_sessao, verificar_token
+# from main import bcryp_context
+from core.security import bcryp_context
+from app.schemas import UsuarioSchema, LoginSchema
 from sqlalchemy.orm import Session
 from jose import jwt, JWTError
 from datetime import datetime, timedelta, timezone
@@ -33,7 +34,7 @@ def autenticar_usuario(email, senha, session):
     usuario = session.query(Usuario).filter(Usuario.email==email).first()
     if not usuario:
         return False
-    elif not bcryp_context.verify(senha, usuario.senha):
+    if not bcryp_context.verify(senha, usuario.senha):
         return False
     
     return usuario

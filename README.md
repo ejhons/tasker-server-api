@@ -1,5 +1,6 @@
 # delivery-fast-api
-Back-end básico em Python utilizando a FastAPI. Resultado do curso da Hash Treinamentos.
+Back-end básico em Python utilizando a FastAPI.
+Gerenciamento do CRUD de geração de tarefas.
 
 ## Descrição
 Curso finalizado em 29/01/2026
